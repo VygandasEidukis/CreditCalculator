@@ -4,7 +4,7 @@ using Application.Validations;
 
 namespace Infrastructure.Calculator.ValidationHandlers;
 
-internal class DurationValidationHandler : IValidationHandler
+public class DurationValidationHandler : IValidationHandler
 {
     private readonly DurationValidation _durationValidation;
 

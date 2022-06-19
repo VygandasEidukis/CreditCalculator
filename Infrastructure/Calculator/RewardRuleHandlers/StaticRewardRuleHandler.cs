@@ -2,7 +2,7 @@
 using Application.RewardRules;
 
 namespace Infrastructure.Calculator.RewardRuleHandlers;
-internal class StaticIntRewardRuleHandler : IRewardRuleHandler
+public class StaticIntRewardRuleHandler : IRewardRuleHandler
 {
     private readonly StaticIntRewardRule _rewardRule;
 

@@ -26,14 +26,14 @@ public static class DependencyInjection
         {
             TypeNameHandling = TypeNameHandling.Auto
         };
-        var tmp = JsonConvert.DeserializeObject<CreditCalculationContext>(creditRuleRaw, jsonSetting);
+        var creditContext = JsonConvert.DeserializeObject<CreditCalculationContext>(creditRuleRaw, jsonSetting);
 
-        if (tmp == null)
+        if (creditContext == null)
         {
             throw new ApplicationException($"{CreditRulePath} has incorrect content");
         }
 
-        services.AddSingleton(tmp);
+        services.AddSingleton(creditContext);
         services.AddTransient<ICalculator<CreditCalculationInput, CreditResult>, CreditCalculator>();
         return services;
     }

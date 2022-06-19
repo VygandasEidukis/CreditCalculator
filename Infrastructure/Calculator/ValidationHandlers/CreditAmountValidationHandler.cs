@@ -3,7 +3,7 @@ using Application.Extensions;
 using Application.Validations;
 
 namespace Infrastructure.Calculator.ValidationHandlers;
-internal class CreditAmountValidationHandler : IValidationHandler
+public class CreditAmountValidationHandler : IValidationHandler
 {
     private readonly CreditAmountValidation _creditAmountValidation;
 

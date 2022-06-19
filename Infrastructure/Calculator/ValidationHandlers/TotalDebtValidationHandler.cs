@@ -3,7 +3,7 @@ using Application.Extensions;
 using Application.Validations;
 
 namespace Infrastructure.Calculator.ValidationHandlers;
-internal class TotalDebtValidationHandler : IValidationHandler
+public class TotalDebtValidationHandler : IValidationHandler
 {
     private readonly TotalDebtValidation _totalDebtValidation;
 
@@ -14,6 +14,11 @@ internal class TotalDebtValidationHandler : IValidationHandler
 
     public bool Validate(CreditCalculationInput input)
     {
+        if (input.RequestedCredit < 0 || input.PreExistingCredit < 0)
+        {
+            return false;
+        }
+
         var totalDebt = input.RequestedCredit + input.PreExistingCredit;
         return totalDebt.InRange(_totalDebtValidation.From, _totalDebtValidation.To);
     }
