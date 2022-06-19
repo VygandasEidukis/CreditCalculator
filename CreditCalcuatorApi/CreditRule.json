@@ -1,0 +1,68 @@
+{
+  "Validations": [
+    {
+      "$type": "Application.Validations.CreditAmountValidation, Application",
+      "From": 2000,
+      "To": 69000
+    },
+    {
+      "$type": "Application.Validations.DurationValidation, Application",
+      "From": 1,
+      "To": null
+    }
+  ],
+  "VerifiableRewardRules": [
+    {
+      "RewardRule": {
+        "$type": "Application.RewardRules.StaticIntRewardRule, Application",
+        "Reward": 3
+      },
+      "Validations": [
+        {
+          "$type": "Application.Validations.TotalDebtValidation, Application",
+          "From": null,
+          "To": 20000
+        }
+      ]
+    },
+    {
+      "RewardRule": {
+        "$type": "Application.RewardRules.StaticIntRewardRule, Application",
+        "Reward": 4
+      },
+      "Validations": [
+        {
+          "$type": "Application.Validations.TotalDebtValidation, Application",
+          "From": 20000,
+          "To": 39000
+        }
+      ]
+    },
+    {
+      "RewardRule": {
+        "$type": "Application.RewardRules.StaticIntRewardRule, Application",
+        "Reward": 5
+      },
+      "Validations": [
+        {
+          "$type": "Application.Validations.TotalDebtValidation, Application",
+          "From": 40000,
+          "To": 59000
+        }
+      ]
+    },
+    {
+      "RewardRule": {
+        "$type": "Application.RewardRules.StaticIntRewardRule, Application",
+        "Reward": 6
+      },
+      "Validations": [
+        {
+          "$type": "Application.Validations.TotalDebtValidation, Application",
+          "From": 60000,
+          "To": null
+        }
+      ]
+    }
+  ]
+}
